@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WorkPlace>
+@{
+    ViewData["Title"] = "Index";
+    int count = 1;
+}
+<div class="card">
+    <div style="display:flex;justify-content:space-between">
+        <h5 class="card-header">Work Places</h5>
+        <a class="btn btn-success" style="height:fit-content;align-self:flex-end;margin-right:10px" asp-action="Create" >
+            Create WorkPlace
+        </a>
+    </div>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Settings</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var place in Model)
+                {
+                    <tr>
+                        <td>@count</td>
+                        <td><img src="~/images/@place.Url" alt="Alternate Text" style="width:100px;height:100px" /></td>
+                        <td>
+                            @place.Name
+                        </td>
+                        <td>
+                            <a class="btn btn-success" asp-action="Delete" asp-route-id="@place.Id">
+                                <i class="fa-solid fa-pencil"></i>
+                            </a>
+                            <a class="btn btn-danger" asp-action="Update" asp-route-id="@place.Id">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    count++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

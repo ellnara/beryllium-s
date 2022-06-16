@@ -1,0 +1,173 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="heading-section mb-5 pb-md-4">Carousel #09</h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="hero featured-carousel owl-carousel">
+                        <div class="item">
+                            <div class="work">
+                                <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/slider-1.jpg);">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="work">
+                                <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/slider-2.jpg);">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="work">
+                                <div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/slider-3.jpg);">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work">
+        <div class="container">
+            <div class="work-content">
+                <div class="work-heading">
+                    <h2>Work</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus placerat enim et urna sagittis, rhoncus euismod erat
+                        tincidunt. Donec tincidunt volutpat erat.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="place-cards">
+                        @foreach (var item in Model.WorkPlaces)
+	                     {
+                        <div class="place-cards-item">
+                            <img src="~/images/@item.Url" alt="" />
+                            <h2>
+                                <a href="">@item.Name</a>
+                            </h2>
+                            <span>@item.Location</span>
+                        </div>
+	                     }             
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="container">
+            <div class="news-content">
+                <div class="news">
+                    <h2>News</h2>
+                    <ul>
+                        <li>
+                            <span>SEPTEMBER 10, 2016</span>
+                            <a href="">Manila Bridge Re-construction</a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus placerat enim et urna sagittis, rhoncus euismod...
+                            </p>
+                        </li>
+                        <li>
+                            <span>SEPTEMBER 10, 2016</span>
+                            <a href="">Manila Bridge Re-construction</a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus placerat enim et urna sagittis, rhoncus euismod...
+                            </p>
+                        </li>
+                        <li>
+                            <span>SEPTEMBER 10, 2016</span>
+                            <a href="">Manila Bridge Re-construction</a>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus placerat enim et urna sagittis, rhoncus euismod...
+                            </p>
+                        </li>
+                    </ul>
+                    <button id="more-news">More News</button>
+                </div>
+                <div class="testimonials">
+                    <h2>Testimonials</h2>
+                    <div class="testimonials-content">
+                        <ul>
+                            <li>
+                                <p>
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus placerat enim et urna sagittis, rhoncus euismod
+                                    erat tincidunt. Donec tincidunt volutpat erat.“
+                                </p>
+                                <span>-- John Doe Dueller</span>
+                            </li>
+                            <li>
+                                <p>
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Phasellus placerat enim et urna sagittis, rhoncus euismod
+                                    erat tincidunt. Donec tincidunt volutpat erat.“
+                                </p>
+                                <span>-- John Doe Dueller</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="learn-more">
+        <div class="container">
+            <div class="row">
+                <div class="parts">
+                    <div class="parts-item architect">
+                        <i class="fa-solid fa-file-zipper"></i>
+                        <div class="sum">
+                            <h2>Architect</h2>
+                            <p>
+                                Lorem ipsum dolor sit ameteista, consectetur adipiscing is
+                                not elitistaris.
+                            </p>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="parts-item planning">
+                        <i class="fa-solid fa-hammer"></i>
+                        <div class="sum">
+                            <h2>Planning</h2>
+                            <p>
+                                Lorem ipsum dolor sit ameteista, consectetur adipiscing is
+                                not elitistaris.
+                            </p>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="parts-item events">
+                        <i class="fa-solid fa-plug"></i>
+                        <div class="sum">
+                            <h2>Parks&Events</h2>
+                            <p>
+                                Lorem ipsum dolor sit ameteista, consectetur adipiscing is
+                                not elitistaris.
+                            </p>
+                            <a href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

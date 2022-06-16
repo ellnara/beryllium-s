@@ -1,0 +1,28 @@
+﻿@using Berylliumm.ViewModels.Category
+@model WorkPlaceCreateVM 
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="row">
+    <div class="col-xl">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Create Work Place</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label asp-for="Image">Image</label>
+                        <input asp-for="Image" type="file" class="form-control" placeholder="Upload Image" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Name">Name</label>
+                        <input asp-for="Name" type="text" class="form-control" placeholder="Name" />
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                    <a class="btn btn-success" asp-action="Index">Send</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
